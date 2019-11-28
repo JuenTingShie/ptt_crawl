@@ -10,7 +10,7 @@ from show_post import get_list
 def refresh_boards():
     request = requests.get('https://www.ptt.cc/bbs/hotboards.html')
     soup = BeautifulSoup(request.content, 'lxml')
-    f = open('boards.txt', 'w', encoding='utf-8')
+    # f = open('boards.txt', 'w', encoding='utf-8')
     c = soup.find_all('a', {'class': 'board'})
     boards = []
     for board in c:
